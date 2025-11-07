@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+}
+
+main {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+h1 {
+    margin: 0 0 0.5rem;
+    font-size: 1.75rem;
+}
+
+.intro {
+    margin: 0 0 1.5rem;
+    color: #555;
+}
+
+.panes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.pane {
+    flex: 1;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-weight: 600;
+}
+
+textarea {
+    width: 100%;
+    min-height: 300px;
+    padding: 0.75rem;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    background: #fff;
+    color: #222;
+    resize: vertical;
+}
+
+textarea:focus {
+    outline: 2px solid #3b82f6;
+    border-color: #3b82f6;
+}
+
+textarea[readonly] {
+    background: #f7f7f7;
+}
+
+.actions {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+button {
+    background: #2563eb;
+    color: #fff;
+    font-weight: 600;
+    border: 1px solid #1d4ed8;
+    border-radius: 4px;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.button-like {
+    display: inline-block;
+    background: #2563eb;
+    color: #fff;
+    font-weight: 600;
+    border: 1px solid #1d4ed8;
+    border-radius: 4px;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button-like:hover {
+    background: #1d4ed8;
+}
+
+#file-input {
+    display: none;
+}
+
+#status {
+    min-height: 1.4rem;
+    flex: 1;
+    color: #444;
+}
+
+#status.error {
+    color: #c0392b;
+}
+
+@media (max-width: 720px) {
+    main {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    textarea {
+        min-height: 220px;
+    }
+}
